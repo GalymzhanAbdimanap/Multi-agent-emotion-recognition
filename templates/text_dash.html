@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+      <script type="text/javascript" src="/static/js/d3/d3.js"></script>
+      <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <title>Dashboard</title>
+
+  </head>
+  <body>
+
+  <a href="/">
+    <img src = "/static/CSS/images/text.png" width="100%">
+  </a>
+
+  <br>
+  <br>
+
+  {% block body %}
+
+<div class="row">
+  <h2><i>Воспринимаемые психологические черты</i></h2>
+
+  <br>
+   <br>
+
+
+  <div class="column_home" id="left-col" align="center">
+      <br>
+      <p>Ваша самая заметная черта - это : </p>
+        <br>
+        <h4> {{trait}} </h4>
+        <br>
+        <div class="parent">
+          <p> Психологические особенности : </p>
+            <ul align="left">
+            <li>Экстраверсия : {{traits[0]}}%</li>
+            <li>Невротизм : {{traits[1]}}%</li>
+            <li>Доброжелательность : {{traits[2]}}%</li>
+            <li>Добросовестность : {{traits[3]}}%</li>
+            <li>Открытость : {{traits[4]}}%</li>
+          </ul>
+      </div>
+      <br>
+    <br>
+  </div>
+
+  <div class="column_home" id="left-col" align="center">
+    <div class="parent">
+        <p>Most common words : </p>
+          <ul align="left">
+             {% for el in common_words %}
+                <li>{{el}}</li>
+              {% endfor %}
+          </ul>
+      </div>
+  </div>
+</div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr width="50%" style="margin-left: 25%; margin-right:25%">
+  <br>
+  <br>
+
+
+ 
+
+  
+
+  <form>
+    <input type="button" value="Back" onclick="history.go(-1)">
+  </form>
+
+  {% endblock %}
+
+</body>
+</html>

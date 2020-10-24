@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <title>Текст</title>
+
+  </head>
+  <body>
+    <a href="/">
+      <img src = "/static/CSS/images/text.png" width="100%" style="height: 500px;">
+    </a>
+
+{% block body %}
+
+<br>
+
+<br>
+
+<div class="row">
+  
+
+
+  <blockquote>
+    <p class="quotation"> Расскажи о своем университете.</p>
+  </blockquote> 
+
+  <form action="/text_1" method="post">
+      <textarea cols="70" rows ="20" name="text"></textarea><br><br>
+    <input type="submit" value="Начать анализ">
+  </form>
+  <br>
+
+</div>
+
+{% endblock %}
+
+
+ <br>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <form>
+    <input type="button" value="Назад" onclick="history.go(-1)">
+  </form>
+  <br>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <title>Видео</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <a href="/">
+      <img src = "/static/CSS/images/ag-hmc150_proav-header-1_v1.jpg" width="100%" style="height: 500px;">
+    </a>
+
+ {% block body %}
+
+<br>
+<blockquote>
+  <p class="quotation">Расскажи о своем университете.</p>
+</blockquote> 
+
+<br>
+<form action="/video_1" method="post">
+  <input type="submit" name="video_1" value="Начать запись"> 
+</form>
+
+<br>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="Won">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+{% endblock %}
+
+<br>
+
+<br>
+
+
+<br>
+<br>
+<form>
+    <input type="button" value="Назад" onclick="history.go(-1)">
+  </form>
+  
+  </body>
+</html>
+
+<script>
+</script>

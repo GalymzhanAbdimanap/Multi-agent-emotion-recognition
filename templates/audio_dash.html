@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+      <script type="text/javascript" src="/static/js/d3/d3.js"></script>
+      <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <title>Dashboard</title>
+
+  </head>
+  <body>
+
+  <a href="/">
+    <img src = "/static/CSS/images/audio_head.jpg" width="100%" style="height: 500px;">
+  </a>
+
+  <br>
+  <br>
+
+  {% block body %}
+
+ <div class="row">
+   <h2><i>Воспринимаемые эмоции</i></h2>
+   <br>
+   <br>
+  <div class="column" id="left-col" align="center">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+        <p>Наиболее подходящая вам эмоция : <b>{{emo}}</b></p>
+        <div class="parent">
+          <ul align="left">
+            <li>Гнев    : {{prob[0]}}%</li>
+            <li>Отвращение  : {{prob[1]}}%</li>
+            <li>Страх     : {{prob[2]}}%</li>
+            <li>Счастье    : {{prob[3]}}%</li>
+            <li>Нейтрально  : {{prob[4]}}%</li>
+            <li>Печаль      : {{prob[5]}}%</li>
+            <li>Удивление : {{prob[6]}}%</li>
+          </ul>
+        </div>
+      <br>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr width="50%" style="margin-left: 25%; margin-right:25%">
+  <br>
+  <br>
+
+  
+
+
+  <br>
+  <br>
+  <br>
+  <hr width="50%" style="margin-left: 25%; margin-right:25%">
+  <br>
+  <br>
+  <form>
+    <input type="button" value="Back" onclick="history.go(-1)">
+  </form>
+
+  {% endblock %}
+
+</body>
+</html>

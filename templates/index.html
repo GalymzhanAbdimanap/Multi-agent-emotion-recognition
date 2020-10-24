@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <title>Распознавание эмоции</title>
+
+  </head>
+  <body>
+    <!-- <a href="/">
+      <img src = "/static/CSS/images/aues_head.png" width="100%" style="height: 400px;">
+    </a> -->
+    
+    <br><br><br><br><br><br><h1>Мультиагентное распознавание эмоций</h1><br><br><br><br><br><br><br><br><br>
+
+ {% block body %}
+
+  <!--
+  Video Interview presentation
+  -->
+  <div class="row">
+      <div class="column_home" id="left-col" align="center">
+        <img src = "/static/CSS/images/video_.png" width="30%">
+        <br><br><br><br><br><br>
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <p> Распознавание эмоций на основе видео.</p>
+          <br>
+          <p> Вам будет предоставлен отзыв о ваших эмоциях на лице, например :
+          <ul>
+            <li> Гнев </li>
+            <li> Счастье </li>
+            <li> Страх </li>
+            <li> Печаль </li>
+            <li> Сюрприз </li>
+            <li> Отвращение </li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <!--
+      Audio Interview presentation
+      -->
+      <div class="column_home" id="left-col" align="center">
+        <img src = "/static/CSS/images/audio_.jpeg" width="30%">
+        <br><br><br><br><br><br>
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <p> Распознавание эмоций на основе аудио.</p>
+          <br>
+          <p> Вам будет предоставлен отзыв о ваших эмоциях по голосу, например :
+          <ul>
+            <li> Гнев </li>
+            <li> Счастье </li>
+            <li> Страх </li>
+            <li> Печаль </li>
+            <li> Сюрприз </li>
+            <li> Отвращение </li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <!--
+      Text Interview presentation
+      -->
+      <div class="column_home" id="left-col" align="center">
+       <img src = "/static/CSS/images/text_.png" width="30%">
+       <br><br><br><br><br><br>
+         <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+           <p> Распознавание на основе текста.</p>
+           <br>
+           <p> Вам будет предоставлен отзыв о ваших психологических качествах Большой пятерки, в том числе :
+           <ul>
+            <li> Открытость </li>
+            <li> Добросовестность </li>
+            <li> Экстраверсия </li>
+            <li> Доброжелательность </li>
+            <li> Невротизм </li>
+         </ul>
+         <br>
+         </div>
+     </div>
+
+  </div>
+
+
+  <div class="row">
+    <!--
+    Video Interview button
+    -->
+     <div class="column_home" id="left-col" align="center">
+         <form action="/video" method="post" align="center">
+         <input type="submit" name="video" value="Видео" align="center">
+       </form>
+     </div>
+
+     <!--
+     Audio Interview button
+     -->
+     <div class="column_home" id="left-col" align="center">
+         <form action="/audio_index" method="post" align="center">
+         <input type="submit" name="audio_index" value="Аудио" align="center">
+       </form>
+     </div>
+
+    <!--
+     Text Interview button
+     -->
+    <div class="column_home" id="left-col" align="center">
+        <form action="/text" method="post" align="center">
+          <input type="submit" name="text" value="Текст" align="center">
+        </form>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+      {# Fin du bloc "body" #}
+    {% endblock %}
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+  </body>
+</html>
